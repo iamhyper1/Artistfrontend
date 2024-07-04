@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Artist Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#forArtist">For Artist</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#createArtistAccount">Create Account</a></li>
+        </ul>
+    </nav>
+
+    <header class="landing-page" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Explore Your Favorite Artists</h1>
+                <p>Discover and connect with artists from around the world.</p>
+                <button id="findArtistBtn">Find Artist</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="for-artist" id="forArtist">
+        <div class="content">
+            <h2>Are You an Artist?</h2>
+            <p>Join our community of artists and showcase your work.</p>
+            <button id="signupBtn">Sign Up Now for Free</button>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-box">
+            <h2>ArtGallery Professional</h2>
+            <div class="rating">
+                <span>&#9733;</span> FREE
+            </div>
+            <div class="box-button">
+                You are on Basic
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Basic Profile</li>
+                <br>
+                <li><span class="fas fa-check"></span> 8 Photos Upload</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unlimited Video Upload </li>
+                <br>
+                <li><i class="fas fa-times"></i> Artist ID Card</li>
+                <br>
+                <li><span class="fas fa-times"></span> Unique URL</li>
+                <br>
+                <li><span class="fas fa-times"></span> Unverified Profile</li>
+                <br>
+                <li><span class="fas fa-times"></span> Event Calender</li>
+            </ul>
+        </div>
+        <div class="pricing-box">
+            <h2>ArtGallery Pro Global</h2>
+            <div class="rating">
+                <span>&#9733;&#9733;</span> $19.99/mo
+            </div>
+            <div class="box-button">
+                Upgrade to Pro Global
+            </div>
+            <ul class="features-list">
+                <li><span class="fas fa-check"></span> Basic Profile</li>
+                <br>
+                <li><span class="fas fa-check"></span> 8 Photos Upload</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unlimited Video Upload </li>
+                <br>
+                <li><span class="fas fa-check"></span> Artist ID Card</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unique URL</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unverified Profile</li>
+                <br>
+                <li><span class="fas fa-check"></span> Event Calender</li>
+            </ul>
+        </div>
+        <div class="pricing-box">
+            <h2>ArtGallery Pro Premium</h2>
+            <div class="rating">
+                <span>&#9733;&#9733;&#9733;</span> $29.99/mo
+            </div>
+            <div class="box-button">
+                Upgrade to Pro Premium
+            </div>
+            <ul class="features-list">
+                <li><span class="fas fa-check"></span> Basic Profile</li>
+                <br>
+                <li><span class="fas fa-check"></span> 8 Photos Upload</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unlimited Video Upload </li>
+                <br>
+                <li><span class="fas fa-check"></span> Artist ID Card</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unique URL</li>
+                <br>
+                <li><span class="fas fa-check"></span> Unverified Profile</li>
+                <br>
+                <li><span class="fas fa-check"></span> Event Calender</li>
+
+            </ul>
+        </div>
+    </section>
+    <section id="register-section">
+        <h1>Register Today and <span>Get Access to...</span></h1>
+        <div class="box-container">
+            <div class="box" id="box1">
+                <img src="images/678116-calendar-512.webp" alt="Calendar Icon" class="icon-top">
+                <h2>Buy Ticket Online</h2>
+                <p>Easily purchase your tickets online with our secure platform.</p>
+                <p>It is possible to easily buy one or more tickets or make multiple seat reservations for your event in a short amount of time with ArtGallery</p>
+            </div>
+            <div class="box" id="box2">
+                <img src="images/h-removebg-preview.png" alt="Ticket Icon" class="icon-top">
+                <h2>Sell Your Event Ticket</h2>
+                <p>List and sell your event tickets with ease.</p>
+                <p> You can sell your tickets for you event among your circle of friends in a short time through ArtGallery. You Can also get many new members with us through this.</p>
+                
+            </div>
+            <div class="box" id="box3">
+                <img src="images/rr.png" alt="Payment Icon" class="icon-top">
+                <h2>Secure Online Payment System</h2>
+                <p>Experience secure transactions with our advanced payment system.</p>
+                <p>Your account is 100% secure when buying or selling tickets through ArtGallery. Your transaction information will be emailed to you immediately </p>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section id="search-artist">  
+            <div class="section-heading">
+                <h1>Search Your Artist</h1>
+            </div>
+            <div class="search-box">
+                <select id="category">
+                    <option value="music">Hiphop Music</option>
+                    <option value="art">Pop Music</option>
+                    <option value="dance">Classical Music</option>
+                    <option value="dance">Jazz Music</option>
+                    <option value="dance">Rhythm and blues Music</option>
+                    <option value="dance">Folk music Music</option>
+                    <option value="dance">K-pop Music</option>
+                </select>
+                <input type="text" id="artist-name" placeholder="Enter artist name...">
+                <button id="search-artist-btn" class="search-button" disabled>Search Artist</button>
+            </div>
+        </section>
+
+        <section class="featured-artists">
+            <h1>Featured Artists</h1>
+            <h3>FIND THE MOST AMAZING & TALENTED ARTISTS</h3>
+            <p>We provide a platform to discover and showcase the best talents in various categories. Explore our featured artists and find inspiration!</p>
+        </section>
+
+        <section class="discover-more">
+            <button class="discover-button">Discover More</button>
+        </section>
+    </div>
+</span>
+<section id="login-section">
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="login-content">
+            <div class="login-form">
+                <h1>ArtGallery Login</h1>
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username or email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <span class="toggle-password">
+                            <i class="fas fa-eye" id="eye-icon"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="button" class="login-btn">Login</button>
+                <div class="links">
+                    <a href="#register">Register</a> / <a href="#forgot-password">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+    <footer>
+        <p>&copy; 2024 Artist Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
