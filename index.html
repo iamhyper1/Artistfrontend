@@ -10,7 +10,8 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="logo"></div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#forArtist">For Artist</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -18,7 +19,13 @@
             <li><a href="#login">Login</a></li>
             <li><a href="#createArtistAccount">Create Account</a></li>
         </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
+
 
     <header class="landing-page" id="home">
         <div class="hero-content">
@@ -109,11 +116,10 @@
                 <li><span class="fas fa-check"></span> Unverified Profile</li>
                 <br>
                 <li><span class="fas fa-check"></span> Event Calender</li>
-
             </ul>
         </div>
-    </section>
-    <section id="register-section">
+    </section> 
+    <section class="register-section" id="events">
         <h1>Register Today and <span>Get Access to...</span></h1>
         <div class="box-container">
             <div class="box" id="box1">
@@ -168,7 +174,7 @@
         </section>
     </div>
 </span>
-<section id="login-section">
+<section class="login-section" id="login">
     <div class="background-overlay"></div>
     <div class="container">
         <div class="login-content">
@@ -182,7 +188,7 @@
                     <label for="password">Password</label>
                     <div class="password-input">
                         <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        <span class="toggle-password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility()">
                             <i class="fas fa-eye" id="eye-icon"></i>
                         </span>
                     </div>
@@ -191,20 +197,45 @@
                     <input type="checkbox" id="rememberMe">
                     <label for="rememberMe">Remember me</label>
                 </div>
-                <button type="button" class="login-btn">Login</button>
+                <button type="login" class="login-btn">Login</button>
                 <div class="links">
-                    <a href="#register">Register</a> / <a href="#forgot-password">Forgot Password</a>
+                    <a href="javascript:void(0);" id="registerLink">Register</a> / <a href="#forgot-password">Forgot Password</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="register-form">
+            <h1>Register</h1>
+            <div class="input-group">
+                <label for="reg-username">Username</label>
+                <input type="text" id="reg-username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="reg-email">Email</label>
+                <input type="email" id="reg-email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="reg-password">Password</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="reg-confirm-password">Confirm Password</label>
+                <input type="password" id="reg-confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
     <footer>
-        <p>&copy; 2024 Artist Gallery. All rights reserved.</p>
+        <p>&copy; 2024 Artist Gallery. All rights reserved.(Arpan Rai)</p>
     </footer>
 
     <script src="script.js"></script>
