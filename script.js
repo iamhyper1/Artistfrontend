@@ -62,19 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 function togglePasswordVisibility() {
-    var passwordField = document.getElementById("password");
-    var eyeIcon = document.getElementById("eye-icon");
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.getElementById("eye-icon");
 
     if (passwordField.type === "password") {
         passwordField.type = "text";
-        eyeIcon.classList.remove("far", "fa-eye");
-        eyeIcon.classList.add("fas", "fa-eye-slash");
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
     } else {
         passwordField.type = "password";
-        eyeIcon.classList.remove("fas", "fa-eye-slash");
-        eyeIcon.classList.add("far", "fa-eye");
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
     }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     const loginContent = document.querySelector(".login-content");
 
@@ -82,14 +83,44 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         loginContent.classList.add("active");
     }, 200);
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Get modal elements
+    var modal = document.getElementById("register-modal");
+    var registerLink = document.getElementById("registerLink");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Open the modal when the register link is clicked
+    registerLink.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Close the modal when the close button is clicked
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
     // Toggle password visibility
-    const togglePassword = document.querySelector(".toggle-password");
-    const passwordField = document.querySelector("#password");
+    window.togglePasswordVisibility = function() {
+        const passwordField = document.getElementById("password");
+        const eyeIcon = document.getElementById("eye-icon");
 
-    togglePassword.addEventListener("click", function() {
-        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-        passwordField.setAttribute("type", type);
-        this.querySelector("i").classList.toggle("fa-eye-slash");
-    });
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        }
+    };
 });
+
